@@ -33,8 +33,8 @@ settings.configure(
     ],
 )
 
-deepgram = Deepgram(os.environ.get("DEEPGRAM_API_KEY"))
-
+#deepgram = Deepgram(os.environ.get("DEEPGRAM_API_KEY"))
+deepgram = os.getenv("DEEPGRAM_API_KEY")
 
 async def transcribe(request):
     if request.method == "POST":
